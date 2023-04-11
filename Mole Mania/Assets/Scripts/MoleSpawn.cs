@@ -10,7 +10,7 @@ public class MoleSpawn : MonoBehaviour
     public GameObject mole;
 
     [Header("Inscribed")]
-    public GameObject molePrefab;
+    public GameObject[] moleType;
 
     private Vector3 respawnLocation;
     
@@ -28,8 +28,8 @@ public class MoleSpawn : MonoBehaviour
     private void SpawnMole()
     {
         int spawn = Random.Range(0, spawnLocations.Length);
-        Debug.Log(spawn);
-        mole = Instantiate<GameObject>(molePrefab);
+        int type = Random.Range(0, moleType.Length);
+        mole = Instantiate<GameObject>(moleType[type]);
         Vector3 spawnTransform = spawnLocations[spawn].transform.position;
         spawnTransform.y += 2;
         mole.transform.position = spawnTransform;
