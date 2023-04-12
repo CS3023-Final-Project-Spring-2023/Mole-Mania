@@ -320,7 +320,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnLocations: []
   mole: {fileID: 0}
-  molePrefab: {fileID: 2166881674580767213, guid: bd8e6aa61363e0646a22597a752db91b, type: 3}
+  moleType:
+  - {fileID: 2166881674580767213, guid: bd8e6aa61363e0646a22597a752db91b, type: 3}
+  - {fileID: 2166881674580767213, guid: bd8e6aa61363e0646a22597a752db91b, type: 3}
+  - {fileID: 2166881674580767213, guid: bd8e6aa61363e0646a22597a752db91b, type: 3}
+  - {fileID: 2166881674580767213, guid: c3fc89af29aa8c2409cf4e2e9a44afd6, type: 3}
 --- !u!1001 &9198064857427697203
 PrefabInstance:
   m_ObjectHideFlags: 0
