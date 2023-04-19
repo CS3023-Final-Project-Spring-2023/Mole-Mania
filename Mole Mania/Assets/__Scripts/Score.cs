@@ -34,7 +34,7 @@ public class Score : MonoBehaviour
     public static void MOLE_HIT() {
         S.score++;
         Debug.Log("Displaying score");
-        _UI_TEXT.text = "Score: " + S.score;
+        _UI_TEXT.text = "" + S.score;
         GameManager.TRY_SET_HIGH_SCORE(S.score);
     }
 
