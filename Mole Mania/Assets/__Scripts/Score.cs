@@ -31,9 +31,9 @@ public class Score : MonoBehaviour
     }
 
     // public method to increase score
-    public static void MOLE_HIT() {
-        S.score++;
-        Debug.Log("Displaying score");
+    public static void MOLE_HIT(int moleType) {
+        // if moleType = mole (0) increase score, else decrease
+        S.score = (moleType == 0) ? S.score + 1 : S.score - 2;
         _UI_TEXT.text = "" + S.score;
         GameManager.TRY_SET_HIGH_SCORE(S.score);
     }

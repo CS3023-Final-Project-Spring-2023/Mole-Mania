@@ -14,9 +14,16 @@ using UnityEngine;
 
 public class Mole : MonoBehaviour
 {
+    private static int mole = 0;
+    private static int bomb = 1;
+
     // if mole is shot (collider is clicked)
     void OnMouseDown() {
-        Debug.Log("Mole hit");
-        Score.MOLE_HIT();
+        Debug.Log(this.gameObject.name);
+        if (this.gameObject.name == "Mole(Clone)") {
+            Score.MOLE_HIT(mole);
+        } else {
+            Score.MOLE_HIT(bomb);
+        }
     }
 }
