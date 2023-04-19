@@ -25,6 +25,6 @@ public class HighScore : MonoBehaviour
     }
 
     public static void DISPLAY_HIGH_SCORE(int score) {
-        _UI_TEXT.text = "High \nScore: " + score;
+        _UI_TEXT.text = "" + score;
     }
 }
