@@ -1,3 +1,14 @@
+/*****
+ * Created by: Ryan Pederson
+ * Created on: ---
+ * 
+ * Last edited by: Ryan Pederson
+ * Last edited on: ---
+ * 
+ * Description: Simple script to spawn in 1 mole in existing holes and make the 
+ *              mole disappear when the player clicks anywhere.
+ *****/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

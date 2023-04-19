@@ -1,22 +1,28 @@
+/*****
+ * Created by: Nathan Nguyen
+ * Created on: 4/18/23
+ * 
+ * Last edited by: Nathan Nguyen
+ * Last edited on: 4/19/23
+ * 
+ * Description: Shows high score when stage is picked.
+ *****/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HighScore : MonoBehaviour
 {
-    static private Text _UI_TEXT;
-    static private int _SCORE = 1000;
+    [SerializeField]
+    static private TMPro.TextMeshProUGUI _UI_TEXT;
     
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Awake() {
+        _UI_TEXT = GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void DISPLAY_HIGH_SCORE(int score) {
+        _UI_TEXT.text = "High \nScore: " + score;
     }
 }
