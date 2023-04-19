@@ -47,6 +47,6 @@ public class GameManager : MonoBehaviour
         int highScore = 0;
         if (PlayerPrefs.HasKey(key))
             highScore = PlayerPrefs.GetInt(key);
-        
+        HighScore.DISPLAY_HIGH_SCORE(highScore);
     }
 }

@@ -15,14 +15,16 @@ using TMPro;
 
 public class HighScore : MonoBehaviour
 {
+    private static HighScore HS; // singleton
     [SerializeField]
     static private TMPro.TextMeshProUGUI _UI_TEXT;
     
     void Awake() {
         _UI_TEXT = GetComponent<TextMeshProUGUI>();
+        HS = this;
     }
 
-    public void DISPLAY_HIGH_SCORE(int score) {
+    public static void DISPLAY_HIGH_SCORE(int score) {
         _UI_TEXT.text = "High \nScore: " + score;
     }
 }
