@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class NewBehaviourScript : MonoBehaviour
+public class Countdown : MonoBehaviour
 {
 public float timeleft;
 public Text Countdown_txt;
@@ -23,7 +23,8 @@ private bool isCounting;
             timeleft -= Time.deltaTime;
         }
 
-        Countdown_txt.Text = timeleft.ToString("0");
+        Countdown_txt.text = timeleft.ToString("0");
+        //Countdown_txt.Text = timeleft.ToString();
 
         if (timeleft <= 0 && isCounting){
             isCounting = false;
