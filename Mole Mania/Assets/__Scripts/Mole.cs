@@ -14,16 +14,26 @@ using UnityEngine;
 
 public class Mole : MonoBehaviour
 {
+<<<<<<< HEAD
     MoleSpawn moleSpawn; //container for mole spawn script
     private bool isDead = false;
     private Vector3 target;
     private float speed = 5;
 
-    // if mole is shot (collider is clicked)
-    void OnMouseDown() {
-        Debug.Log("Mole hit");
-        Score.MOLE_HIT();
-        isDead = true;
+    private static int mole = 0;
+    private static int bomb = 1;
+
+    void OnMouseDown()
+    {
+        Debug.Log(this.gameObject.name);
+        if (this.gameObject.name == "Mole(Clone)")
+        {
+            Score.MOLE_HIT(mole);
+        }
+        else
+        {
+            Score.MOLE_HIT(bomb);
+        }
     }
 
     void Update()
@@ -38,6 +48,7 @@ public class Mole : MonoBehaviour
         }
 
     }
+
     IEnumerator DestroyMole()
     {
         for (int x=1; x<= 5; x++)
@@ -47,6 +58,6 @@ public class Mole : MonoBehaviour
         }
         yield return new WaitForSeconds(.25f);
         Destroy(gameObject);
-
     }
+
 }
