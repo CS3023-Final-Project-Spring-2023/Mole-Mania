@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; //Temporary for testing
+
 
 public class MoleSpawn : MonoBehaviour
 {
@@ -25,7 +25,7 @@ public class MoleSpawn : MonoBehaviour
         SpawnMole();
     }
 
-    private void SpawnMole()
+    public void SpawnMole()
     {
         int spawn = Random.Range(0, spawnLocations.Length);
         int type = Random.Range(0, moleType.Length);
@@ -34,15 +34,6 @@ public class MoleSpawn : MonoBehaviour
         spawnTransform.y += 2;
         mole.transform.position = spawnTransform;
         //picks a random hole to spawn the mole at and moves it up
-    }
-    void Update()//Temporary scene reset for testing
-    {
-        if (Input.GetButtonDown("Fire1")) //press LCtl
-        {
-            Debug.Log("Reset");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-
     }
     
 }
