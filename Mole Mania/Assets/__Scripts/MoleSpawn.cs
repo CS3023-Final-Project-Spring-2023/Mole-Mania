@@ -5,8 +5,7 @@
  * Last edited by: Ryan Pederson
  * Last edited on: ---
  * 
- * Description: Simple script to spawn in 1 mole in existing holes and make the 
- *              mole disappear when the player clicks anywhere.
+ * Description: Simple script to spawn in 1 mole in existing holes.
  *****/
 
 using System.Collections;
@@ -22,8 +21,10 @@ public class MoleSpawn : MonoBehaviour
 
     [Header("Inscribed")]
     public GameObject[] moleType;
+    public int SpawnTime = 1000;
 
     private Vector3 respawnLocation;
+    private int SpawnTimeCount;
     
     void Awake()
     {
@@ -34,17 +35,26 @@ public class MoleSpawn : MonoBehaviour
     void Start()
     {
         SpawnMole();
+        SpawnTimeCount = SpawnTime;//initialises the timer
+    }
+
+    void Update()
+    {
+        SpawnTimeCount --;//counts down to spawn another mole
+        if (SpawnTimeCount <= 0)
+        {
+            SpawnMole();
+            SpawnTimeCount = SpawnTime;//resets timer after spawning mole
+        }
     }
 
     public void SpawnMole()
     {
-        int spawn = Random.Range(0, spawnLocations.Length);
-        int type = Random.Range(0, moleType.Length);
+        int spawn = Random.Range(0, spawnLocations.Length);//picks random hole from list
+        int type = Random.Range(0, moleType.Length);//picks random mole from array
         mole = Instantiate<GameObject>(moleType[type]);
         Vector3 spawnTransform = spawnLocations[spawn].transform.position;
-        spawnTransform.y += 2;
-        mole.transform.position = spawnTransform;
-        //picks a random hole to spawn the mole at and moves it up
+        mole.transform.position = spawnTransform;//sets mole pos to hole pos
     }
     
 }
