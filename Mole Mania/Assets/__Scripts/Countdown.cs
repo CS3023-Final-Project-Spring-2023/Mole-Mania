@@ -24,7 +24,6 @@ private bool isCounting;
         }
 
         Countdown_txt.text = timeleft.ToString("0");
-        //Countdown_txt.Text = timeleft.ToString();
 
         if (timeleft <= 0 && isCounting){
             isCounting = false;
