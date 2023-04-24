@@ -34,7 +34,7 @@ public class MoleSpawn : MonoBehaviour
 
     void Start()
     {
-        SpawnMole();
+        //SpawnMole();
         SpawnTimeCount = SpawnTime;//initialises the timer
     }
 
