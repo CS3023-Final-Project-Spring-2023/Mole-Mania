@@ -44,7 +44,7 @@ public class Mole : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (inPos == false)
         {
@@ -65,7 +65,8 @@ public class Mole : MonoBehaviour
     IEnumerator RiseUpMole()
     {
         Debug.Log("Up");
-        target = new Vector3(transform.position.x, (transform.position.y + .0175f), transform.position.z);
+        // original:  (transform.position.y + .0175f)
+        target = new Vector3(transform.position.x, (transform.position.y + .15f), transform.position.z);
         for (int x = 1; x <= 2; x++)//animates movement from original pos to new pos
         {
             transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);
