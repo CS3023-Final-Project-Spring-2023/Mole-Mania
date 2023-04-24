@@ -2,8 +2,8 @@
  * Created by: Ryan Pederson
  * Created on: ---
  * 
- * Last edited by: Ryan Pederson
- * Last edited on: ---
+ * Last edited by: Nathan Nguyen
+ * Last edited on: 4/23/2023
  * 
  * Description: Simple script to spawn in 1 mole in existing holes.
  *****/
@@ -38,7 +38,7 @@ public class MoleSpawn : MonoBehaviour
         SpawnTimeCount = SpawnTime;//initialises the timer
     }
 
-    void Update()
+    void FixedUpdate()
     {
         SpawnTimeCount --;//counts down to spawn another mole
         if (SpawnTimeCount <= 0)
