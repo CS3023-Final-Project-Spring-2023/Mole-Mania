@@ -18,7 +18,7 @@ public class Mole : MonoBehaviour
     private bool isDead = false; //bool for calling when to remove mole
     private Vector3 target; //movement target for up and down movement
     private float speed = 5; //movement speed for up and down movements
-    private int life = 500; //Time before mole dies naturally
+    private int life = 100; //Time before mole dies naturally
     private bool inPos = false; //bool to get mole to proper vitical pos on spawn
 
     private static int mole = 0;
