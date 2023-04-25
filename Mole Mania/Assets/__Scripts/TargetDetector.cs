@@ -1,3 +1,13 @@
+/*****
+ * Created by: Nathan Nguyen
+ * Created on: 
+ * 
+ * Last edited by: Nathan Nguyen
+ * Last edited on: 4/24/23
+ * 
+ * Description: Determines where to shoot the bullet and and sends it the created bullet.
+ *****/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
