@@ -18,7 +18,7 @@ public class Mole : MonoBehaviour
     private bool isDead = false; //bool for calling when to remove mole
     private Vector3 target; //movement target for up and down movement
     private float speed = 5; //movement speed for up and down movements
-    private int life = 1000; //Time before mole dies naturally
+    private int life = 100; //Time before mole dies naturally
     private bool inPos = false; //bool to get mole to proper vitical pos on spawn
 
     private static int mole = 0;
@@ -44,7 +44,7 @@ public class Mole : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (inPos == false)
         {
@@ -65,7 +65,8 @@ public class Mole : MonoBehaviour
     IEnumerator RiseUpMole()
     {
         Debug.Log("Up");
-        target = new Vector3(transform.position.x, (transform.position.y + .0175f), transform.position.z);
+        // original:  (transform.position.y + .0175f)
+        target = new Vector3(transform.position.x, (transform.position.y + .17f), transform.position.z);
         for (int x = 1; x <= 2; x++)//animates movement from original pos to new pos
         {
             transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);
