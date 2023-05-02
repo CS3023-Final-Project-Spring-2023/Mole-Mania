@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4784726451708395524}
   - component: {fileID: 1961536174061637167}
   - component: {fileID: 75918868437170506}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4824,7 +4824,7 @@ GameObject:
   - component: {fileID: 1657566336839625013}
   - component: {fileID: 6308228613806029529}
   - component: {fileID: 4477045706380201950}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BombMole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4958,10 +4958,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: e7c963c04deeb9c4781fd13abc7a8606, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c963c04deeb9c4781fd13abc7a8606, type: 3}
 --- !u!4 &1103650307523618710 stripped
@@ -5020,37 +5016,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8391222552659086748, guid: 20c59c48c57a57c45808a66472f25aea, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -5568371526223589888, guid: 20c59c48c57a57c45808a66472f25aea, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -1018664272722485354, guid: 20c59c48c57a57c45808a66472f25aea, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -516098083770646512, guid: 20c59c48c57a57c45808a66472f25aea, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 20c59c48c57a57c45808a66472f25aea, type: 3}
       propertyPath: m_Name
       value: BombMole
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 20c59c48c57a57c45808a66472f25aea, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8416272007918961125, guid: 20c59c48c57a57c45808a66472f25aea, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513859187771203891, guid: 20c59c48c57a57c45808a66472f25aea, type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c59c48c57a57c45808a66472f25aea, type: 3}
