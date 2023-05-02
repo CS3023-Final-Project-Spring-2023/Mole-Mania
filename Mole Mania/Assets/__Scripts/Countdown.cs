@@ -9,14 +9,11 @@ public class Countdown : MonoBehaviour
 public float timeleft;
 public Text Countdown_txt;
 private bool isCounting;
-public GameObject GameOverPanel;
-
 
     // Start is called before the first frame update
     void Start()
     {
      isCounting = true;   
-     GameOverPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,11 +27,6 @@ public GameObject GameOverPanel;
 
         if (timeleft <= 0 && isCounting){
             isCounting = false;
-            ShowGameOver();
         }
-     }
-
-     void ShowGameOver(){
-        GameOverPanel.SetActive(true);
      }
 }
