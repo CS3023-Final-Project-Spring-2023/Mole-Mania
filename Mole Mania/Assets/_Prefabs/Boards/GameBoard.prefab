@@ -56,12 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnLocations: []
   mole: {fileID: 0}
-  Last5Locations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  LastLocations: []
   moleType:
   - {fileID: 2166881674580767213, guid: bd8e6aa61363e0646a22597a752db91b, type: 3}
   - {fileID: 2166881674580767213, guid: bd8e6aa61363e0646a22597a752db91b, type: 3}

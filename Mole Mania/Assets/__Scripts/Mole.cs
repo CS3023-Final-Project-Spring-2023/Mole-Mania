@@ -32,7 +32,7 @@ public class Mole : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(this.gameObject.name);
+        //Debug.Log(this.gameObject.name);
         isDead = true;
         if (this.gameObject.name == "Mole(Clone)")
         {
@@ -64,7 +64,7 @@ public class Mole : MonoBehaviour
 
     IEnumerator RiseUpMole()
     {
-        Debug.Log("Up");
+        //Debug.Log("Up");
         // original:  (transform.position.y + .0175f)
         target = new Vector3(transform.position.x, (transform.position.y + .17f), transform.position.z);
         for (int x = 1; x <= 2; x++)//animates movement from original pos to new pos

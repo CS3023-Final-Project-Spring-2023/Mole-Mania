@@ -45,6 +45,7 @@ public class MoleSpawn : MonoBehaviour
         SpawnTimeCount --;//counts down to spawn another mole
         if (SpawnTimeCount <= 0)
         {
+            Debug.Log("Spawning Mole");
             SpawnMole();
             SpawnTimeCount = SpawnTime;//resets timer after spawning mole
         }

@@ -962,6 +962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeleft: 60
   Countdown_txt: {fileID: 1161805656}
+  GameOverPanel: {fileID: 0}
 --- !u!114 &1161805656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,6 +1733,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2067833997, guid: 2d3370a28bbc9c6449d3fea3c9c237ad, type: 3}
+      propertyPath: SpawnTime
+      value: 1000000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067833997, guid: 2d3370a28bbc9c6449d3fea3c9c237ad, type: 3}
+      propertyPath: LastLocations.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5334838728891477861, guid: 2d3370a28bbc9c6449d3fea3c9c237ad, type: 3}
       propertyPath: m_Name
       value: GameBoard
@@ -1780,14 +1789,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2067833997, guid: 2d3370a28bbc9c6449d3fea3c9c237ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d3370a28bbc9c6449d3fea3c9c237ad, type: 3}
 --- !u!1 &2067833996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5334838728891477861, guid: 2d3370a28bbc9c6449d3fea3c9c237ad, type: 3}
   m_PrefabInstance: {fileID: 2067833995}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2067833997
+--- !u!114 &2067833999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1801,6 +1811,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnLocations: []
   mole: {fileID: 0}
+  LastLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   moleType:
   - {fileID: 2166881674580767213, guid: bd8e6aa61363e0646a22597a752db91b, type: 3}
   - {fileID: 2166881674580767213, guid: bd8e6aa61363e0646a22597a752db91b, type: 3}
