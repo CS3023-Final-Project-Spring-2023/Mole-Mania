@@ -3,7 +3,7 @@
  * Created on: 4/18/23
  * 
  * Last edited by: Nathan Nguyen
- * Last edited on: 4/18/23
+ * Last edited on: 5/4/2023
  * 
  * Description: Keeps track of current score and sends it to GameManager when level ends.
  *****/

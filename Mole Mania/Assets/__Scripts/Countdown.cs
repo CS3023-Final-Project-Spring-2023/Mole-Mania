@@ -1,3 +1,13 @@
+/*****
+ * Created by: Zhiyuan
+ * Created on: ---
+ * 
+ * Last edited by: Nathan Nguyen
+ * Last edited on: 5/4/2023
+ * 
+ * Description: Tracks level timer.
+ *****/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +37,7 @@ private bool isCounting;
 
         if (timeleft <= 0 && isCounting){
             isCounting = false;
+            GameManager.SWITCH_TO_END_SCENE();
         }
      }
 }
