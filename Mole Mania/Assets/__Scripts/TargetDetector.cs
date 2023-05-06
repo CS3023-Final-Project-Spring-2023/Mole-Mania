@@ -28,10 +28,12 @@ public class TargetDetector : MonoBehaviour
     public Vector3 worldPositionRotate;
 
     private Transform gunParent;
+    private AudioSource aS;
 
     void Start() {
         speed = 5.0f;
         gunParent = transform.parent;
+        aS = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -60,6 +62,8 @@ public class TargetDetector : MonoBehaviour
             if (Physics.Raycast(ray, out RaycastHit hitData, 100, layersToHit)) {
                 worldPosition = hitData.point;
             }
+
+            aS.Play(); // play gunshot noise
 
             GameObject go = Instantiate(bullet, bulletSpawnPosition, bullet.transform.rotation).gameObject;
             go.GetComponent<FireProjectile>().targetPosition = worldPosition;
